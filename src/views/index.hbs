@@ -1,1 +1,35 @@
-<h1>index</h1>
+<div class="position-absolute center">
+    {{#each tasks}}
+    <div class="card m-3 w-75 bg-dark">
+        <div class="row m-3">
+            <div class="col-sm-1">
+                <button class="btn btn-dark text-success mb-3"><i class="bi bi-check2-square"></i></button>
+                <button class="btn btn-dark text-warning mb-3"><i class="bi bi-x-circle"></i></button>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-header row">
+                        <p class="col-6">
+                            {{title}}
+                        </p>
+                        <p class="col">
+                            {{status}}
+                        </p>
+                        <p class="col">
+                            {{creation.day}}/{{creation.month}}/{{creation.year}}
+                        </p>
+                    </div>
+                    <p>
+                        {{description}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <a href='/edit/{{id}}' class="btn btn-dark text-info mb-3"><i class="bi bi-pencil-square"></i></a>
+                <button class="btn btn-dark text-danger mb-3"><i class="bi bi-trash"></i></button>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<a href=""></a>

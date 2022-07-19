@@ -1,25 +1,15 @@
-import Series from '../models/Series'
+import Task from '../models/Task'
 
 export const create = async (req, res) => {
-  
-  console.log(req.body.cover);
-  
-  const caps=[]
-  for(let i=0; i<req.body.chapters; i++){
-    caps.push(i+1)
+  try {
+    const task = Task(req.body);
+
+    await task.save()
+
+    res.redirect('/')
+    
+  } catch (error) {
+    console.log(error);
   }
-  console.log(caps);
-  const series = Series({
-    title: req.body.title,
-    description: req.body.description,
-    chapters: caps,
-  });
-  
-  console.log(series);
-
-
-  // const serieSaved = await series.save()
-
-  res.redirect('/')
 }
 
