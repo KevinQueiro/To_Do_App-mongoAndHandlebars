@@ -10,12 +10,12 @@ const taskSchema = new Schema({
         type: String,
         trim: true
     },
-    status: {
+    status: { //el estado de una tarea, con valores predefinidos
         type: String,
         enum: ['completed', 'cancelled', 'not finished'],
         default: 'not finished'
     },
-    archived: {
+    archived: { //para diferenciar si esta en la vista principal o en el historial
         type: Boolean,
         default: false
     }

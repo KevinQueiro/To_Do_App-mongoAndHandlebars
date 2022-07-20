@@ -5,9 +5,9 @@ import path from 'path' //para que la direccion de las views sera accesible desd
 import morgan from 'morgan';
 
 const app = express()
+
 //donde esta la carpeta views?
 app.set('views', path.join(__dirname, 'views'));   //setea la ruta de la vista porque no esta directo en el "root" .. __dirname rempleza ruta absoluta para las views
-
 app.engine(
     ".hbs",
     exphbs({
@@ -17,14 +17,13 @@ app.engine(
     extname: ".hbs",
 })
 );
-
 app.set('view engine', '.hbs')
 
 //middlewares
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended:false}));
 
-//rutas
+//ruteo
 app.use(indexRoutes)
 
 export default app;

@@ -5,8 +5,12 @@
     <div class="card m-3 w-75 bg-dark">
         <div class="row m-3">
             <div class="col-sm-1">
-                <a href='/status/{{id}}/completed' class="btn btn-dark text-success mb-3"><i class="bi bi-check2-square"></i></a>
-                <a href='/status/{{id}}/cancelled' class="btn btn-dark text-warning mb-3"><i class="bi bi-x-circle"></i></a>
+                <a href='/status/{{id}}/completed' class="btn btn-dark text-success mb-3">
+                    <i class="bi bi-check2-square"></i>
+                </a>
+                <a href='/status/{{id}}/cancelled' class="btn btn-dark text-warning mb-3">
+                    <i class="bi bi-x-circle"></i>
+                </a>
             </div>
             {{> cards}}
             <div class="col-sm-1">
@@ -15,9 +19,6 @@
             </div>
         </div>
     </div>
-    
     {{/if}}
-
     {{/each}}
 </div>
-<a href=""></a>
