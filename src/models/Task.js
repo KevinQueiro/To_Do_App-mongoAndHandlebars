@@ -7,14 +7,18 @@ const taskSchema = new Schema({
         trim: true  // saca los espacios vacios insecesarios (no entre palabras)
     },
     description: {
-       type: String,
-       trim: true
+        type: String,
+        trim: true
     },
     status: {
         type: String,
-        enum: ['completed', 'cancelled', 'in progress'],
-        default: 'in progress'
+        enum: ['completed', 'cancelled', 'not finished'],
+        default: 'not finished'
     },
+    archived: {
+        type: Boolean,
+        default: false
+    }
 }, {
     timestamps: true,
     versionKey: false

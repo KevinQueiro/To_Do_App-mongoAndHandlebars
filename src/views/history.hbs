@@ -1,0 +1,14 @@
+<div>
+    {{#each tasks}}
+    {{#if archived}}
+    <div class="card m-3 w-75 bg-dark">
+        <div class="row m-3">
+            {{> cards}}
+            <div class="col-sm-2">
+                <a href='/forget/{{id}}' class="btn btn-dark text-danger mb-3 border-danger">olvidar</i></a>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+    {{/each}}
+</div>
