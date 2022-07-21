@@ -30,10 +30,10 @@ router.post('/edit/:id', edit)
 router.get('/status/:id/:status', status)
 
 //rutas para añadir tareas
-router.get('/add', (req,res)=>{
+router.get('/add', (req, res) => {
     res.render('add')
 })
-router.post('/add', create )
+router.post('/add', create)
 
 //ruta del historial
 router.get('/history', show)

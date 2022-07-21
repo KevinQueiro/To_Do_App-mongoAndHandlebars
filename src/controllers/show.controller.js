@@ -23,7 +23,7 @@ export const show = async (req, res) => {
             }
             allTasks.push(taskFormat)
         }
-        //condicional para diferenciar entre las tareas que van a la vista principal y las del historial
+        //condicional para diferenciar entre las tareas que van a la vista principal y las del historial (se filtra en la vista)
         !!req.path.split('/')[1] ? res.render('history', { tasks: allTasks }) : res.render('index', { tasks: allTasks })
     } catch (error) {
         console.log(error);

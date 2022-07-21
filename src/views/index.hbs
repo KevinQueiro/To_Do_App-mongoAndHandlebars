@@ -1,24 +1,24 @@
-<div>
+<div class='row justify-content-center'>
     {{#each tasks}}
-    {{#if archived}}
-    {{else}}
-    <div class="card m-3 w-75 bg-dark">
-        <div class="row m-3">
-            <div class="col-sm-1">
-                <a href='/status/{{id}}/completed' class="btn btn-dark text-success mb-3">
-                    <i class="bi bi-check2-square"></i>
-                </a>
-                <a href='/status/{{id}}/cancelled' class="btn btn-dark text-warning mb-3">
-                    <i class="bi bi-x-circle"></i>
-                </a>
-            </div>
-            {{> cards}}
-            <div class="col-sm-1">
-                <a href='/edit/{{id}}' class="btn btn-dark text-info mb-3"><i class="bi bi-pencil-square"></i></a>
-                <a href='/delete/{{id}}' class="btn btn-dark text-danger mb-3"><i class="bi bi-trash"></i></a>
+        {{#if archived}}
+        {{else}}
+        <div class="card m-3 w-75 bg-dark">
+            <div class="row justify-content-center m-3">
+                <div class="col-sm-1">
+                    <a href='/status/{{id}}/completed' class="btn btn-dark text-success mb-3">
+                        <i class="bi bi-check2-square"></i>
+                    </a>
+                    <a href='/status/{{id}}/cancelled' class="btn btn-dark text-warning mb-3">
+                        <i class="bi bi-x-circle"></i>
+                    </a>
+                </div>
+                {{> cards}}
+                <div class="col-sm-1">
+                    <a href='/edit/{{id}}' class="btn btn-dark text-info mb-3"><i class="bi bi-pencil-square"></i></a>
+                    <a href='/delete/{{id}}' class="btn btn-dark text-danger mb-3"><i class="bi bi-trash"></i></a>
+                </div>
             </div>
         </div>
-    </div>
-    {{/if}}
+        {{/if}}
     {{/each}}
 </div>
