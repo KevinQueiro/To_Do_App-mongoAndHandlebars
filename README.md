@@ -7,8 +7,6 @@ Este es un proyecto creado con la finalidad de indagar mas en el uso de bases de
     - Renombrar el archivo ".env_Example" por ".env"
     - Setear las variables de entorno de dicho archivo
     - Intalar dependecias: npm i
-    - Correr la aplicacion: npm start 
-
-La aplicacion fue desplegada usando mongoDB atlas para la base de datos y heroku para el resto.
-
-## Para ver la aplicacion desplegas utilice el siguiente [enlase](https://todo-app-queiro.herokuapp.com/)
+    - Construir la aplicacion: npm run build
+    - Correr la aplicacion: npm start
+    - Visualizar la aplicacion en: "localhost:(numero de puerto del archivo .env)"
